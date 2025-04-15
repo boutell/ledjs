@@ -29,15 +29,6 @@ export function set(x, y, r, g, b) {
   display[y][x] = `rgb(${r},${g},${b})`;
 }
 
-export function get(x, y) {
-  x = Math.floor(x);
-  y = Math.floor(y);
-  if (!inBounds(x, y)) {
-    throw new Error(`Out of bounds: ${x} ${y} (bounds are ${w} x ${h})`);
-  }
-  return display[y][x];
-}
-
 export function inBounds(x, y) {
   return !((x < 0) || (x >= width) || (y < 0) || (y >= height))
 }

@@ -1,5 +1,5 @@
 import * as screen from './screen.js';
-import { frame } from './app.js';
+import { frame } from '../app.js';
 const canvas = document.getElementById('canvas');
 
 requestAnimationFrame(driver);

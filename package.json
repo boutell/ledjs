@@ -1,18 +1,16 @@
 {
   "name": "ledjs",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "dev-server.js",
   "scripts": {
-    "start": "node server.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node dev-server.js"
   },
   "author": "Thomas Boutell",
   "license": "MIT",
   "description": "Simulates an LED matrix display for dev purposes",
   "type": "module",
   "dependencies": {
+    "boring": "^1.1.1",
     "express": "^5.1.0"
   }
 }
