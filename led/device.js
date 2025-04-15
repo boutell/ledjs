@@ -1,5 +1,6 @@
 import * as screen from './screen.js';
 import { frame } from '../app.js';
+import { performance } from 'perf_hooks';
 
 go();
 
