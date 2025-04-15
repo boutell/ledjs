@@ -1,16 +1,22 @@
 import * as screen from './screen.js';
-import { frame } from '../app.js';
 import { performance } from 'perf_hooks';
+import boring from 'boring';
 
-go();
+const argv = boring();
 
 const fps = 60;
 
-const seconds = 5;
+const seconds = argv.seconds ? parseInt(argv.seconds) : false;
+const animation = argv._[0];
+if (!animation) {
+  console.error('The first argument must be an animation name');
+  process.exit(1);
+}
 
-// argv.seconds ? parseInt(argv.seconds) : false;
+go();
 
 async function go() {
+  const { frame } = await import(`../animations/${animation}.js`);
   let last = false;
   const start = performance.now();
   while (true) {
