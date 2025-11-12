@@ -1,1 +1,3 @@
 /node_modules
+# Because this is cross-platform
+/package-lock.json
