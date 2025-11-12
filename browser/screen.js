@@ -29,15 +29,6 @@ export function set(x, y, r, g, b) {
   display[y][x] = `rgb(${r},${g},${b})`;
 }
 
-export function line(x1, y1, x2, y2, r, g, b) {
-  const max = Math.max(Math.abs(y2 - y1), Math.abs(x - x1));
-  for (let i = 0; i <= max; i++) {
-    const x = (x2 - x1) / max * i;
-    const y = (y2 - y1) / max * i;
-    set(x, y, r, g, b);
-  }
-}
-
 export function inBounds(x, y) {
   return !((x < 0) || (x >= width) || (y < 0) || (y >= height))
 }

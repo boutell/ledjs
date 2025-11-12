@@ -76,5 +76,6 @@ app.get('/:name', (req, res) => {
 });
 app.use('/animations', express.static(`${__dirname}/animations`));
 app.use('/browser', express.static(`${__dirname}/browser`));
+app.use('/lib', express.static(`${__dirname}/lib`));
 app.listen(3000);
 console.log('listening on port 3000');
